@@ -1,0 +1,20 @@
+Given an array containing both negative and positive integers. Find the contiguous sub-array with maximum sum.
+ 
+Input:
+integers A1, A2, ..., AN denoting the elements of the array.
+ 
+Output:
+Print the maximum sum of the contiguous sub-array in a separate line for each test case.
+
+ 
+Example:
+
+Input
+1 2 3
+Output
+6
+
+Input
+-1 -2 -3 -4
+Output
+-1
