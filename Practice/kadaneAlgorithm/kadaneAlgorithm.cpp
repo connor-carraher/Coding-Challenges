@@ -5,24 +5,23 @@ using namespace std;
 
 int MaxSubArraySum(vector<int> a, int size)
 {
-    int currMax = 0;
-    int lastMax = 0;
+    int overallMax = 0;
+    int currentMax = 0;
 
     for(int i = 0; i < size; ++i)
     {
-        lastMax += a[i];
+        currentMax += a[i];
 
-        if(lastMax > currMax)
+        if(currentMax < 0)
         {
-            currMax = lastMax;
+            currentMax = 0;
         }
-        else if (a[i] > currMax)
+        if(overallMax < currentMax)
         {
-            currMax = a[i];
-            lastMax = a[i];
+            overallMax = currentMax;
         }
     }
-    return currMax;
+    return overallMax;
 }
 
 int main()
