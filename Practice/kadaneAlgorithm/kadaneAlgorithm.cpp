@@ -21,6 +21,12 @@ int MaxSubArraySum(vector<int> a, int size)
             overallMax = currentMax;
         }
     }
+
+    if(overallMax == 0)
+    {
+        overallMax = a.max();
+    }
+    
     return overallMax;
 }
 
